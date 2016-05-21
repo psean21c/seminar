@@ -1,0 +1,65 @@
+====================================================================
+NodeJS Demo
+====================================================================
+  0_callback
+  1_basicHttpSever
+  2_jsonServer
+  3_routing (*)
+  4_mongoDB
+  5_mongoose
+  
+(* install Express)
+DOS> npm install express --save
+(Run server)
+DOS> node httpServer.js
+
+====================================================================
+LOGIN
+====================================================================
+DOS> node simpleMongoServer.js (* install mongodb/express)
+ 
+ (1) Install module of mongodb
+ ** Check /node_modules/
+ ** rmdir {folder}
+ >> npm install mongodb --save
+
+(2) Run the Mongo DB server
+ >> mongod
+ >> mongo 
+
+/*************/
+DB create
+DB Drop 
+
+Collection / Document
+ Create
+ Retrieve
+ Update
+ Delete
+/*************/
+
+	>	show dbs
+
+	>	use tokofe
+	>	db
+		
+	* Create
+	>	show dbs
+	>	db.yourmovie.insert( { a: 1 } ) 
+	>	db.yourmovie.insert( { a: 2 } ) 
+	>	db.yourmovie.insert( { a: 3 } ) 
+	* Retrive
+	>	db.yourmovie.find()
+	* Update
+	>   db.yourmovie.update({a:1},{$set:{a:5}})
+	    db.yourmovie.update({a:2},{$set:{b:"Do not ask"}})
+	
+	* Delete
+	>   db.yourmovie.remove({a:5})
+	
+	>	show collections
+	
+    >   db.createCollection("mymovie")
+    >   db.mymovie.drop()
+    *   true
+	
